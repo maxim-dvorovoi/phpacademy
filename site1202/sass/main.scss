@@ -1,0 +1,205 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  border: 0;
+  border-top: 8px solid LightBlue;
+  width: 40px;
+  float: right;
+}
+
+h1 {
+  font-family: Tahoma;
+  font-size: 28px;
+  letter-spacing: 7px;
+  color: DimGrey;
+  width: 150px;
+}
+
+h2 {
+  font-family: "Open Sans";
+  font-size: 18px;
+  color: DimGrey;
+}
+
+h3 {
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: DarkGrey;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+h4 {
+  font-family: "Open Sans";
+  font-size: 15px;
+  color: DarkGrey;
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #878787;
+  width: 980px;
+
+}
+
+li {
+  float: left;
+  margin-left: 65px;
+
+  a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.4s
+  }
+
+  a:hover {
+    background-color: DarkGrey;
+  }
+}
+
+.headtext {
+  padding-left: 45%;
+  line-height: 0.5;
+}
+
+.center-img1 {
+  display: block;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: silver;
+  border: none;
+  color: white;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+  :hover {
+    background-color: Gainsboro;
+    color: white;
+  }
+}
+
+.container {
+  display: inline-block;
+  position: static;
+
+  :hover .image {
+    opacity: 0.3;
+  }
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+text1 {
+  display: block;
+  margin: 0 auto;
+}
+
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
