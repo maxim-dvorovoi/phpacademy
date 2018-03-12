@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="main.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="document" >
+        <button type="submit" name="submit">Отправить</button>
+		<br><br>
+		<?php directory($doc)?>
+		<?php directory($etc)?>	
+		<table>
+        <?php for($i=2;$i<count($filesFolderImg);$i++): ?>
+		<tr>
+			<td>
+				<img src="<?=$imgDirection . $filesFolderImg[$i];?>">
+			</td>
+		</tr>
+        <?php endfor; ?>
+    </table>
+    </form>
+</body>
+</html>
