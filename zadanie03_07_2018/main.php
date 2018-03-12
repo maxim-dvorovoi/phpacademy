@@ -71,11 +71,22 @@ function directory($a) {
 	print_r ($files);
 	echo "<br>";
 }
-	
 
+function creatFolder($doc,$etc,$img) {
+	if (file_exists($doc) == false && file_exists($etc) == false && file_exists($img) == false) {
+		mkdir("./doc");
+		mkdir("./img");
+		mkdir("./etc");
+	}
+}
+
+ 	
 $doc = '/xampp/htdocs/php/zadanie03_07_2018/doc/';
 $etc = '/xampp/htdocs/php/zadanie03_07_2018/etc/';
 $img = '/xampp/htdocs/php/zadanie03_07_2018/img/';
+
+creatFolder($doc,$etc,$img);
+
 $file = requestFiles('document');
 $imgDirection = "./img/";
 
@@ -110,6 +121,7 @@ if ($_POST) {
     }
 }
 $filesFolderImg = scandir($img);
+
 
 
 include 'index.html';
