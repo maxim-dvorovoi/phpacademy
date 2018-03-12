@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="6.php" method="post" enctype="multipart/form-data">
+        <input type="file" id="photo" name="photo[]"  multiple>
+        <button type="submit" name="submit">Отправить</button>
+    </form>
+    <div><?=$form_was_send ? 'готово': 'не загрузилось'; ?></div>
+    <?php if(file_exists('name_image.txt')): ?>
+    <table>
+        <?php for($i=0;$i<count($result);$i++): ?>
+		<tr>
+			<td>
+				<img src="<?=$folder.$result[$i];?>">
+			</td>
+		</tr>
+        <?php endfor; ?>
+    </table>
+    <?php endif; ?>
+</body>
+</html>
