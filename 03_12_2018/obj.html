@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Страница</title>
+</head>
+<body>
+	<h1>Hello</h1>
+
+	<script type="text/javascript">
+		function isEqual(obj,newObj) {
+			if (obj == newObj){
+				alert('эквивалентны');
+			} else {
+				alert('no');
+			}
+		}
+		
+		var obj = {
+			test1: 5,
+			test2: {
+				test3: 'Test',
+				test4: false,
+				test5: [
+					{
+						test6: 'Test'
+					},
+					{
+						test7: 10
+					}
+				]
+			},
+			test8: {
+				test9:{
+					test10: [1,2,3]
+				}
+			}
+		}
+
+		var newObj = Object.assign(obj);
+
+		obj !== newObj;
+
+		isEqual(obj,newObj);
+	</script> 
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Страница</title>
+</head>
+<body>
+	<h1>Кодування Віженера</h1>
+
+	<script type="text/javascript">
+		function keyWord (key,word){
+			var c ;
+			for(var i = 0; i <= word.length; i++){
+				if (key.length < word.length){
+					key = key + key ;
+				}
+			}
+			if(key.length > word.length){
+				c = key.length - word.length;
+				c = key.substr(0,key.length - c);
+			} else if (key.length == word.length){
+				c = key.length;
+			}
+			return c;
+		}
+		
+		function findIndexKeyEcr(keyWord,en){
+			var index = [];
+			for (var i = 0; i < keyWord.length; i++){
+				for(var j = 0; j < en.length; j++){
+					if (keyWord[i] == en[j]){
+						index[i] = j;
+						
+					}
+				}
+			}
+			return index; 
+		}
+		
+		function findIndexWordEcr(word,en){
+			var index = [];
+			for (var i = 0; i < word.length; i++){
+				for(var j = 0; j < en.length; j++){
+					if (word[i] == en[j]){
+						index[i] = j;
+						
+					}
+				}
+			}
+			return index;
+		}
+		
+		function ecryption(indexKeyEncryption,indexWordEncryption,en){
+			var index = [];
+			var result = [];
+			
+			en = en + en;
+			for (var i = 0; i < indexWordEncryption.length; i++){
+				index[i] = indexWordEncryption[i] + indexKeyEncryption[i];
+			}
+			
+			for (var i = 0; i < index.length; i++){
+				result[i] =  en[index[i]];
+			}
+			var a = result.join('')
+			return a;
+		}
+		
+	
+		
+		
+		var en = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var word  = 'WIKIPEDIA';
+		var key = 'LIME';
+		var indexKeyEncryption = [];
+		var indexWordEncryption = [];
+		
+		var keyWord = keyWord (key,word);
+		
+		indexKeyEncryption = findIndexKeyEcr(keyWord,en);
+		indexWordEncryption = findIndexWordEcr(word,en);
+		var result = ecryption(indexKeyEncryption,indexWordEncryption,en);
+		
+		document.write("Слово: " + word + "<br>");
+		document.write("Ключ: " + key + "<br>");
+		document.write("Шифр: " + result);
+		
+		
+	</script> 
+</body>
+</html>

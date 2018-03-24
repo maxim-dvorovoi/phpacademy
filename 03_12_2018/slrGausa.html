@@ -1,0 +1,93 @@
+<html>
+<head>
+<title></title>
+<body>
+метод Гаусса
+<script language=javascript>
+var arr = [
+	[5,-1,-1,0],
+	[1,2,3,14],
+	[4,3,2,16],
+];
+n=arr.length; 
+var l=new Array(n); 
+var i, j, k;      
+for(i=0; i<n; ++i) {
+    l[i] = new Array(n);
+}
+
+
+
+document.write("<br>");
+
+for(i=0; i<n; i++) {
+    for(j=0; j < n; j++) {
+		document.write(arr[i][j] + " ");
+    }
+	document.write("<br>");
+}
+
+
+document.write("<br>");
+
+Iteration(n);
+Answers();
+ 
+function Iteration(iter_item) { 
+    for(iter_item=0;iter_item<(n-1);iter_item++) {
+        if (arr[iter_item][iter_item] == 0) SwapRows(iter_item);
+        for(j=n; j>=iter_item; j--) {
+            arr[iter_item][j] /= arr[iter_item][iter_item];
+        }
+        for(i=iter_item+1; i<n; i++) {
+            for(j=n;j>=iter_item;j--) {
+                arr[i][j] -= arr[iter_item][j] * arr[i][iter_item];
+            }
+        }
+        if (iter_item % 2) document.write("<table border='1'>");
+            else    document.write("<table>");
+        for(i=0; i<n; ++i) {
+            document.write("<tr>");
+            for(j=0; j <= n; ++j) {
+                document.write("<td>" + arr[i][j] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    }
+};
+
+function SwapRows(iter_item) {
+    for(i=iter_item+1;i<n;i++) {
+        if(arr[i][iter_item] !== 0) {
+            for(j=0;j<=n;j++) {
+                k = arr[i-1][j];
+                arr[i-1][j] = arr[i][j];
+                arr[i][j] = k;
+            }
+        } 
+    }
+};
+
+function Answers() {
+    l[n-1] = arr[n-1][n]/arr[n-1][n-1];
+    for(i=n-2;i>=0;i--) {
+        k=0;
+        for(j=n-1;j>i;j--) {
+            k = (arr[i][j]*l[j]) + k;
+        }
+        l[i] = arr[i][n] - k;
+		l[i] = l[i];
+    }
+    for(i=n;i>0;i--) {
+    document.write("<h1> x" + i + " = " + l[i-1].toFixed(2) + "</h1>");
+    }
+};
+</script>
+</body
+</html>
+
+
+
+
+
