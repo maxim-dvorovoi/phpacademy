@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Страница</title>
+</head>
+<body>
+	<h1>Задание1</h1>
+
+	<script type="text/javascript">
+		function Student(name,surname,x1,x2,x3) {
+			this.name = name;
+			this.surname = surname;
+			this.grades = [x1,x2,x3];
+			
+			if(!Student.group) {
+				Student.group = [this];
+			} else {
+				Student.group.push(this);
+			}
+			
+			this.fullName = function () {
+				document.write("Полное имя: " + this.name + " " + this.surname + "<br>");
+				
+			}
+			this.gradesAvarage = function (){
+				var a = Math.round(((x1+x2+x3)/3) * 100) / 100;
+				document.write("Средний бал: " + a + "<br>");
+			}
+			
+			Student.showAllStudents = function (){
+				var a = [];
+				for(var i = 0; i < Student.group.length; i++){
+					var average = Math.round((((Student.group[i]["grades"][0])+(Student.group[i]["grades"][1])+(Student.group[i]["grades"][2]))/3) * 100) / 100;
+					a[i] =  Student.group[i]['name'] + " " + Student.group[i]['surname'] + ".Средний бал = " + average;
+				}
+				return a;
+			}
+			
+			function best() {
+				var average = [];
+				for(var i = 0; i < Student.group.length; i++){
+					average [i] = Math.round((((Student.group[i]["grades"][0])+(Student.group[i]["grades"][1])+(Student.group[i]["grades"][2]))/3) * 100) / 100;
+				}
+				
+				for(var i = 0; i < Student.group.length; i++){
+					var a = Math.round((((Student.group[i]["grades"][0])+(Student.group[i]["grades"][1])+(Student.group[i]["grades"][2]))/3) * 100) / 100;
+					if (Math.max.apply(null, average) == a) {
+						return Student.group[i];
+					}
+				}
+			
+			}
+			
+			Student.showBestStudent = function (){
+				var c = best();
+				var b = c['name'] + " " + c['surname'] + " Лучший студент.Средний бал = " + Math.round((((c["grades"][0])+(c["grades"][1])+(c["grades"][2]))/3) * 100) / 100;
+				return b;
+					
+			}
+			
+			Student.bestStudent = best();
+			
+		}
+		
+		var student1 = new Student ('Ivan','Ivanov',4,5,5);
+		var student2 = new Student ('Semen','Semenov',3,5,5);
+		var student3 = new Student ('Petr','Petrov',4,3,5);
+
+		
+		console.log (Student.group);
+		console.log (Student.showAllStudents());
+		console.log (Student.showBestStudent());
+		console.log (Student.bestStudent);
+			
+	</script> 
+</body>
+</html>
+
+
+
+
+
