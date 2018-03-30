@@ -35,11 +35,32 @@
 					test10: [1,2,3]
 				}
 			}
-		}
+		};
 
-		var newObj = Object.assign(obj);
+		var newObj = {
+			test1: 5,
+			test2: {
+				test3: 'Test',
+				test4: false,
+				test5: [
+					{
+						test6: 'Test'
+					},
+					{
+						test7: 10
+					}
+				]
+			},
+			test8: {
+				test9:{
+					test10: [1,2,3]
+				}
+			}
+		};
+		
+		newObj = obj;
 
-		obj !== newObj;
+		alert(obj !== newObj);
 
 		isEqual(obj,newObj);
 	</script> 
