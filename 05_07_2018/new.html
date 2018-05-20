@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+    <input type="button" onclick="back()" id="back" value="НАЗАД">
+    <br><br><br>
+
+    <input type="button" onclick="action()" id="0" value="имя">
+    <p id="0more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="1" value="имя">
+    <p id="1more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="2" value="имя">
+    <p id="2more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="3" value="имя">
+    <p id="3more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="4" value="имя">
+    <p id="4more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="5" value="имя">
+    <p id="5more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="6" value="имя">
+    <p id="6more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="7" value="имя">
+    <p id="7more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="8" value="имя">
+    <p id="8more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="9" value="имя">
+    <p id="9more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="10" value="имя">
+    <p id="10more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="11" value="имя">
+    <p id="11more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="12" value="имя">
+    <p id="12more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="13" value="имя">
+    <p id="13more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="14" value="имя">
+    <p id="14more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="15" value="имя">
+    <p id="15more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="16" value="имя">
+    <p id="16more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="17" value="имя">
+    <p id="17more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="18" value="имя">
+    <p id="18more" style="color:white"></p>
+
+    <input type="button" onclick="action()" id="19" value="имя">
+    <p id="19more" style="color:white"></p>
+
+    <script type="text/javascript">
+        var collection;
+
+        function getCookie(name) {
+            var cookie = " " + document.cookie;
+            var search = " " + name + "=";
+            var setStr = null;
+            var offset = 0;
+            var end = 0;
+            if (cookie.length > 0) {
+                offset = cookie.indexOf(search);
+                if (offset != -1) {
+                    offset += search.length;
+                    end = cookie.indexOf(";", offset)
+                    if (end == -1) {
+                        end = cookie.length;
+                    }
+                    setStr = unescape(cookie.substring(offset, end));
+                }
+            }
+            return(setStr);
+        }
+
+        function deleteCookie(name) {
+            document.cookie = name+"=; path=/; expires=0";
+        }
+
+
+        function action() {
+            var ktoVizval = event.target;
+            var idVizval = ktoVizval.getAttribute("id");
+            var idVizvalMore = idVizval+"more";
+            document.getElementById(idVizvalMore).setAttribute("style","color:black");
+
+            function setCookie(num) {
+                document.cookie='foo=' + num + '; path=/; expires=3600;';
+            }
+
+            setCookie(idVizvalMore);
+
+            for(var i = 0; i<20; i++){
+                if(i != idVizval){
+                    document.getElementById(i).type = "hidden";
+                }
+            }
+        }
+
+        function back() {
+            var idmore = getCookie("foo");
+
+            for(var i = 0; i<20; i++){
+                document.getElementById(i).type = "button";
+            }
+            document.getElementById(idmore).setAttribute("style","color:white");
+            deleteCookie("foo");
+        }
+
+    if(getCookie("foo") == null) {
+        fetch('https://pokeapi.co/api/v2/pokemon/')
+            .then(function (response) {
+                if (response.status !== 200) {
+                    debugger;
+                    console.log('Problem' + response.status);
+                }
+
+                response.json().then(function (data) {
+                    collection = data.data;
+
+                    function pokePrint() {
+                        for (var i = 0; i < 20; i++) {
+                            document.getElementById(i).value = (i + 1) + ". " + data.results[i].name;
+                            var imore = i + "more";
+                            document.getElementById(imore).innerHTML = data.results[i].url;
+
+                        }
+                    }
+
+                    pokePrint();
+
+                    console.log(data);
+                    console.log(data.results[0]);
+                });
+            })
+            .catch(function (err) {
+                console.log('Fetch Error', err);
+            });
+    } else {
+        fetch('https://pokeapi.co/api/v2/pokemon/')
+            .then(function (response) {
+                if (response.status !== 200) {
+                    debugger;
+                    console.log('Problem' + response.status);
+                }
+
+                response.json().then(function (data) {
+                    collection = data.data;
+
+                    function pokePrint() {
+                        for (var i = 0; i < 20; i++) {
+                            document.getElementById(i).value = (i + 1) + ". " + data.results[i].name;
+                            var imore = i + "more";
+                            document.getElementById(imore).innerHTML = data.results[i].url;
+
+                        }
+                    }
+
+                    pokePrint();
+
+                    console.log(data);
+                    console.log(data.results[0]);
+                });
+            })
+            .catch(function (err) {
+                console.log('Fetch Error', err);
+            });
+
+        var idMore = getCookie("foo")
+
+        document.getElementById(idMore).setAttribute("style", "color:black");
+        if (idMore.length == 5) {
+            var idM = idMore[0];
+        } else {
+            var idM = idMore[0]+idMore[1];
+        }
+        for(var i = 0; i<20; i++){
+            if(i != idM){
+                document.getElementById(i).type = "hidden";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
