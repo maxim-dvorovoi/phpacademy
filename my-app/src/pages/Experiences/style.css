@@ -1,0 +1,14 @@
+.Experiences {
+	background-color: white;
+	margin-top: 0;
+	height: 500px;
+}
+
+.Experiences > div {
+	width: 300px;
+	text-align: left;
+	margin-left: 120px;
+	float: left;
+	padding-right: 30px;
+}
+

@@ -1,0 +1,41 @@
+.footer {
+    background-color: #293b5a;
+    height: 80px;
+    border-radius: 0 0 10px 10px;
+    color: white;
+}
+
+.text {
+	padding-top: 25px;
+	width: 200px;
+	float: left;
+    margin-left: 10px;
+}
+
+.footer img {
+	width: 50px;
+	margin-left: 290px;
+	margin-top: 15px;
+	border-radius: 50px;
+}
+
+.button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.git {
+	float: left;
+	margin-left: 221px;
+	margin-top: 18px;
+}

@@ -1,0 +1,23 @@
+.Project {
+	background-color: white;
+	margin-top: 0;
+	height: 500px;
+}
+
+.Project .img {
+	margin: 0 auto;
+	width: 443px
+}
+
+.Project .img:hover .image {
+    opacity: 0.3;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    margin: 0 auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    height: 400px;
+}

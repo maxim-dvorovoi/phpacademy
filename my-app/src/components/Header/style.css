@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:300,400);
+
+.header {
+    height: 80px;
+    background-color: #293b5a;
+    margin-top: 100px;
+    border-radius: 10px 10px 0 0;
+}
+
+.navList {
+    padding-top: 15px; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 980px;
+}
+
+li {
+    float: left;
+    margin-left: 65px;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    position: relative;
+}
+
+a.effect-underline:after {
+    content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+

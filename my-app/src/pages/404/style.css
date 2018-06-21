@@ -1,0 +1,11 @@
+.Error {
+	background-color: white;
+	margin-top: 0;
+	color: #82cbc9;
+	height: 500px;
+}
+
+.Error > img {
+	margin: 0 auto;
+	width: 400px;
+}
