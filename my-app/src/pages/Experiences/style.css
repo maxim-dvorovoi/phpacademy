@@ -35,6 +35,13 @@
 	color: white;
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	outline: none;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
 }
 
 .Experiences > div ul li h3 {
