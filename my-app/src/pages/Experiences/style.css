@@ -4,7 +4,15 @@
 	height: 500px;
 }
 
-.Experiences > div {
+.Text1 {
+	width: 300px;
+	text-align: left;
+	margin-left: 150px;
+	float: left;
+	padding-right: 30px;
+}
+
+.Text2 {
 	width: 300px;
 	text-align: left;
 	margin-left: 120px;
@@ -12,3 +20,48 @@
 	padding-right: 30px;
 }
 
+.Experiences > div ul{
+	margin-left: 165px;
+}
+
+.Experiences > div ul li {
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	margin-left: 100px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+	background-color: #426dae;
+	color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.Experiences > div ul li h3 {
+	margin-top: 10px;
+}
+
+.Experiences > div ul li span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.Experiences > div ul li span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.Experiences > div ul li:hover span {
+  padding-right: 25px;
+}
+
+.Experiences > div ul li:hover span:after {
+  opacity: 1;
+  right: 0;
+}
