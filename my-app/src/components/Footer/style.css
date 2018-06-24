@@ -14,28 +14,55 @@
 
 .footer img {
 	width: 50px;
-	margin-left: 290px;
+	margin-left: 270px;
 	margin-top: 15px;
 	border-radius: 50px;
 }
 
 .button {
-    background-color: green;
+    background-color: #39ad42;
     border: none;
     color: white;
     padding: 7px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     transition-duration: 0.4s;
     border-radius: 10px;
+    outline: none;
+    width:  150px;
 }
 
 .git {
 	float: left;
 	margin-left: 221px;
 	margin-top: 18px;
+}
+
+.git span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.git span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.git:hover span {
+  padding-right: 25px;
+}
+
+.git:hover span:after {
+  opacity: 1;
+  right: 0;
 }

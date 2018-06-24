@@ -11,7 +11,7 @@ class Footer extends Component {
                 	<b>Dvorovoi Maxim</b>
                 </div>
                 <div className="git">
-                	<a href="https://github.com/vmolo4nik/phpacademy"><button class="button">Visit my Git</button></a>
+                	<a href="https://github.com/vmolo4nik/phpacademy"><button class="button"><span>Visit my Git</span></button></a>
                 </div>
                 <img src={logo} />
 

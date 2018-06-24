@@ -11,7 +11,7 @@ class Contact extends Component {
                 <h1><b>Contact</b></h1>
                 <hr/><br/><br/><br/><br/>
                 <div>    
-	            <img src={gmail}/><h2>&nbsp;   e-mail: vmolo4nik@gmail.com <br/><br/></h2>
+	            <img src={gmail}/><h2>&nbsp;   e-mail: <a href="mailto:vmolo4nik@gmail.com">vmolo4nik@gmail.com</a><br/><br/></h2>
 	            <img src={facebook}/><h2>&nbsp;  facebook: <a href="https://www.facebook.com/maxim.dvorovoy">maxim.dvorovoy</a><br/></h2>	               
                 </div>
             </div>

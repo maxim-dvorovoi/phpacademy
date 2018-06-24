@@ -21,7 +21,7 @@ class Profile extends Component {
 	            	working in a team</p>
             	</div>
             	
-                <img className="logo" src={logo} />
+                <img src={logo} />
                 <br/>
                 <div>
                     <h2>Details<br/><br/></h2>
