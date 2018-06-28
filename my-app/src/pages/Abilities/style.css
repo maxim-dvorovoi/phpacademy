@@ -4,7 +4,11 @@
 	height: 500px;
 }
 
-.Abilities > div {
+.ldt-fade-in {
+  animation-duration: 0.4s;
+}
+
+.Abilities .ldt-fade-in > div {
 	width: 250px;
 	text-align: left;
 	margin-left: 180px;
@@ -13,7 +17,7 @@
 	padding-right: 30px;
 }
 
-.Abilities > div img {
+.Abilities .ldt-fade-in > div img {
 	width: 50px;
 	float: left;
 	margin-right: 30px;

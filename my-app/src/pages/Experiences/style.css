@@ -20,17 +20,18 @@
 	padding-right: 30px;
 }
 
-.Experiences > div ul{
+.Experiences .ldt-fade-in > div ul{
 	margin-left: 165px;
+	margin-top: 20px;
 }
 
-.Experiences > div ul li {
+.Experiences .ldt-fade-in > div ul li {
 	width: 150px;
 	height: 50px;
 	text-align: center;
 	margin-left: 100px;
 	margin-right: 50px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	background-color: #426dae;
 	color: white;
 	border-radius: 10px;
@@ -44,18 +45,18 @@
     user-select: none;
 }
 
-.Experiences > div ul li h3 {
+.Experiences .ldt-fade-in > div ul li h3 {
 	margin-top: 10px;
 }
 
-.Experiences > div ul li span {
+.Experiences .ldt-fade-in > div ul li span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.Experiences > div ul li span:after {
+.Experiences .ldt-fade-in > div ul li span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -64,11 +65,11 @@
   transition: 0.5s;
 }
 
-.Experiences > div ul li:hover span {
+.Experiences .ldt-fade-in > div ul li:hover span {
   padding-right: 25px;
 }
 
-.Experiences > div ul li:hover span:after {
+.Experiences .ldt-fade-in > div ul li:hover span:after {
   opacity: 1;
   right: 0;
 }

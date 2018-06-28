@@ -4,13 +4,13 @@
 	height: 500px;
 }
 
-.Contact > div {
+.Contact .ldt-fade-in > div {
 	text-align: left;
 	width: 400px;
 	margin-left: 330px;
 }
 
-.Contact > div img {
+.Contact .ldt-fade-in > div img {
 	width: 30px;
 	float: left;
 }
