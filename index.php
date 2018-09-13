@@ -17,7 +17,6 @@ function explodeNum($str) {
 
 $str = 'All GPS satellites broadcast at the same 2 frequencies, 1.57542 GHz - L1 signal, and 1.2276 GHz - L2 signal';
 
-echo("Первый способ<br>");
 print_r(explodeNum($str));
 
 
